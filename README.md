@@ -5,9 +5,9 @@ A webpage with the sole purpose of spinning one or more virtual rats.
 
 Check it out [here](https://eatmygoose.github.io/RatSpinner/index.html)
 
-![](./docs/preview1.png)
+![Spinning Rats](./docs/PreviewAnimation_600px.gif)
 
-## List of other rat spinners:
+## List of other rat spinners
 
 - [spinningrat.online](https://spinningrat.online/)
 - [zeddwolff](https://zeddwolff.itch.io/spinning-rat)
