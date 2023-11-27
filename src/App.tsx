@@ -21,7 +21,7 @@ function App() {
   const [nRows, setNRows] = React.useState(8);
   const [nCols, setNCols] = React.useState(8);
 
-  const [showSideBar, setShowSidebar] = React.useState<boolean>(true);
+  const [showSideBar, setShowSidebar] = React.useState<boolean>(false);
 
   const controls: IControlList = {
       scale,
