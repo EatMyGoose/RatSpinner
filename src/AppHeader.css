@@ -1,0 +1,18 @@
+.show-xs{
+    display: none;
+}
+
+.inline-block{
+    display: inline-block;
+}
+
+@media screen and (max-width: 540px){
+    .hide-xs{
+        display:none;
+    }
+
+    .show-xs{
+        display:unset;
+    }
+}
+

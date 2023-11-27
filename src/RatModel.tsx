@@ -1,6 +1,7 @@
 import React from 'react';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { useLoader, useFrame } from '@react-three/fiber'
+import ratModel from "./assets/jpeg_rat.glb"
 
 const deg2Radians: number = (Math.PI / 180.0);
 
@@ -19,7 +20,7 @@ const origin: [number, number, number] = [0, 0, 0];
 
 export function RatModel(props: IRatModel)
 {
-  const gltf = useLoader(GLTFLoader, './jpeg_rat.glb');
+  const gltf: any = useLoader(GLTFLoader, ratModel);
 
   const [xRot, setXRot] = React.useState<number>(0);
   const [yRot, setYRot] = React.useState<number>(0);

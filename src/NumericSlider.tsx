@@ -5,19 +5,16 @@ interface INumericSlider
     title: string,
     lower: number,
     upper: number,
-    initial: number,
+    value: number,
     step: number
     onValueChange: (newValue: number) => void
 }
 
 export function NumericSlider(props: INumericSlider)
 {
-    const [value, setValue] = React.useState<number>(props.initial);
-
     function OnValueChange(e: React.ChangeEvent<HTMLInputElement>)
     {
         const newValue: number = Number(e.target.value);
-        setValue(newValue)
         props.onValueChange(newValue);
     }
 
@@ -26,7 +23,7 @@ export function NumericSlider(props: INumericSlider)
             {props.title}
             <input 
                 type="range" 
-                value={value}
+                value={props.value}
                 max={props.upper}
                 min={props.lower}
                 step={props.step}

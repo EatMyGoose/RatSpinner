@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "https://eatmygoose.github.io/RatSpinner/static/css/main.4cdeab60.css",
-    "main.js": "https://eatmygoose.github.io/RatSpinner/static/js/main.47ef6645.js",
+    "main.css": "https://eatmygoose.github.io/RatSpinner/static/css/main.65b99078.css",
+    "main.js": "https://eatmygoose.github.io/RatSpinner/static/js/main.14bf20a5.js",
     "static/js/787.0e245708.chunk.js": "https://eatmygoose.github.io/RatSpinner/static/js/787.0e245708.chunk.js",
+    "static/media/jpeg_rat.glb": "https://eatmygoose.github.io/RatSpinner/static/media/jpeg_rat.ee673dab3fe2364f3ca0.glb",
     "index.html": "https://eatmygoose.github.io/RatSpinner/index.html",
-    "main.4cdeab60.css.map": "https://eatmygoose.github.io/RatSpinner/static/css/main.4cdeab60.css.map",
-    "main.47ef6645.js.map": "https://eatmygoose.github.io/RatSpinner/static/js/main.47ef6645.js.map",
+    "main.65b99078.css.map": "https://eatmygoose.github.io/RatSpinner/static/css/main.65b99078.css.map",
+    "main.14bf20a5.js.map": "https://eatmygoose.github.io/RatSpinner/static/js/main.14bf20a5.js.map",
     "787.0e245708.chunk.js.map": "https://eatmygoose.github.io/RatSpinner/static/js/787.0e245708.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4cdeab60.css",
-    "static/js/main.47ef6645.js"
+    "static/css/main.65b99078.css",
+    "static/js/main.14bf20a5.js"
   ]
 }

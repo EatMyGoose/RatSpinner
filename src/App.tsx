@@ -6,6 +6,8 @@ import { AppHeader } from './AppHeader';
 import { AppFooter } from './AppFooter';
 import { RatGrid } from './RatGrid';
 import { IRotationAxes } from './types';
+import { SideBar } from './Sidebar';
+import { IControlList } from './ControlList';
 
 
 
@@ -19,26 +21,39 @@ function App() {
   const [nRows, setNRows] = React.useState(8);
   const [nCols, setNCols] = React.useState(8);
 
+  const [showSideBar, setShowSidebar] = React.useState<boolean>(true);
+
+  const controls: IControlList = {
+      scale,
+      onScaleChanged:setScale,
+      degPerSecond,
+      onSpeedChanged:setDegPerSecond,
+      speedVariance,
+      onSpeedVarianceChanged:setSpeedVariance,
+      cols:nCols,
+      onColsChanged:setNCols,
+      rows:nRows,
+      onRowsChanged:setNRows,
+      rotOffset,
+      onRotOffsetChanged:setRotOffset,
+      rotAxes,
+      onRotAxesChanged:setRotAxes
+  };
+
   return (
     <>
+    <SideBar 
+      show={showSideBar}
+      onClose={() => setShowSidebar(false)}
+      {...controls}
+    />
+    <div className='flex-container'>
       <AppHeader
-        initialScale={scale}
-        onScaleChanged={setScale}
-        initialDegPerSecond={degPerSecond}
-        onSpeedChanged={setDegPerSecond}
-        initialSpeedVariance={speedVariance}
-        onSpeedVarianceChanged={setSpeedVariance}
-        initialCols={nCols}
-        onColsChanged={setNCols}
-        initialRows={nRows}
-        onRowsChanged={setNRows}
-        initialRotOffset={rotOffset}
-        onRotOffsetChanged={setRotOffset}
-        initialRotAxes={rotAxes}
-        onRotAxesChanged={setRotAxes}
+        {...controls}
+        setShowSidebar={() => setShowSidebar(true)}
       />
       
-      <article style={{padding:"24px"}}>
+      <article style={{padding:"24px", flex:1}}>
         
         <React.Suspense fallback={<div aria-busy/>}>
           <Canvas 
@@ -63,6 +78,7 @@ function App() {
       </article>
       
       <AppFooter/>
+    </div>
     </>
   );
 }

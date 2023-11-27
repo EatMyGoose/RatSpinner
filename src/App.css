@@ -1,7 +1,25 @@
 .viewport{
     width: 90vw;
-    height: 70vh !important; 
     margin-left: auto;
     margin-right: auto;
     display: block;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+body{
+    height: 100%;
+}
+
+#root{
+    height: 100%;
+    position: relative;
+}
+
+html{
+    height: 100vh;
 }
